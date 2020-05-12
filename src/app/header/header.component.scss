@@ -1,0 +1,90 @@
+@import "../../assets/Scss/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.navbar {
+
+    &-brand {
+        font-size: 1.5rem;
+    }
+
+    &-nav {
+        flex-direction: row;
+
+        .nav-link {
+            margin: 0 0.6rem;
+        }
+    }
+
+    &-collapse {
+        justify-content: flex-end;
+    }
+
+    &-toggler {
+        border-color: transparent;
+        border-radius: none;
+    }
+}
+
+.header {
+    padding-top: 10rem;
+    background-color: $light-background;
+
+    &__intro {
+
+        &__desc {
+            color: #666;
+        }
+
+        &__button {
+            background-color: $color-primary;
+            border-color: $color-primary;
+            font-size: 1.25rem;
+            padding: 1rem 5rem;
+        }
+    }
+
+    &__img {
+        background-color: #e8e8e8;
+        max-width: 90%;
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+
+        img {
+            max-width: 91%;
+            transform: translate(13px, 13px);
+            border-radius: 4px;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .navbar {
+        
+        &-brand {
+            font-size: 1.7rem;
+        }
+    }
+
+    .header {
+
+        &__intro {
+            position: relative;
+
+            &__cont {
+                position: absolute;
+                top: 40%;
+                transform: translateY(-40%);
+            }
+        }
+
+        &__img {
+    
+            img {
+                max-width: 94%;
+                transform: translate(14px, 14px);
+            }
+        }
+    }
+}
