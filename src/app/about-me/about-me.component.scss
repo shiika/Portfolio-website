@@ -1,0 +1,58 @@
+@import "../../assets/Scss/variables";
+@import "../../assets/Scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.about-me {
+    padding: 4rem 0;
+
+    &__label {
+        background: url("../../assets/img/about-me-img.png") no-repeat center center;
+        padding: 8rem 2rem;
+
+        &__heading {
+            font-size: 2rem;
+            color: $heading-color;
+            position: relative;
+
+            &::before {
+                content: '';
+                background-color: $color-primary;
+                width: 70%;
+                height: 4px;
+                position: absolute;
+                top: 150%;
+                left: 50%;
+                transform: translateX(-50%);
+
+            }
+        }
+    }
+
+    &__desc {
+        color: $paragraph-color;
+        line-height: 2;
+
+        &__buttons {
+
+            button {
+                @include primary-button;
+            }
+        }
+    }
+}
+
+
+@include media-breakpoint-up(lg) {
+
+    .about-me {
+
+        &__label {
+
+            &__heading {
+                font-size: 3rem;
+            }
+        }
+    }
+}
