@@ -5,92 +5,112 @@
 @import "~bootstrap/scss/mixins";
 
 .navbar {
+  background-color: white;
 
-    &-brand {
-        font-size: 1.5rem;
+
+  &-brand {
+    font-size: 1.5rem;
+  }
+
+  &-nav {
+    flex-direction: row;
+
+    .nav-link {
+      margin: 0 0.6rem;
     }
+  }
 
-    &-nav {
-        flex-direction: row;
+  .collapsed {
+    opacity: 1;
+    z-index: 1000;
+  }
 
-        .nav-link {
-            margin: 0 0.6rem;
-        }
+  &-collapse {
+    justify-content: flex-end;
+
+    @include media-breakpoint-down(md) {
+      transform: translateY(20px);
+      transition: opacity .4s, transform .4s;
+      opacity: 0;
+      width: 100%;
+      background-color: white;
+
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+      }
     }
+  }
 
-    &-collapse {
-        justify-content: flex-end;
-    }
-
-    &-toggler {
-        border-color: transparent;
-        border-radius: none;
-    }
+  &-toggler {
+    border-color: transparent;
+    border-radius: none;
+  }
 }
 
 .header {
-    padding: 5rem 0;
-    background-color: $light-background;
+  padding: 5rem 0;
+  background-color: $light-background;
 
-    &__intro {
+  &__intro {
 
-        &__name {
-            font-size: 3rem;
-        }
-
-        &__desc {
-            color: #666;
-        }
-
-        &__button {
-            @include primary-button;
-        }
+    &__name {
+      font-size: 3rem;
     }
 
-    &__img {
-        background-color: #e8e8e8;
-        max-width: 90%;
-        border: 1px solid #e8e8e8;
-        border-radius: 8px;
-
-        img {
-            max-width: 91%;
-            transform: translate(5%, 4%);
-            border-radius: 4px;
-        }
+    &__desc {
+      color: #666;
     }
+
+    &__button {
+      @include primary-button;
+    }
+  }
+
+  &__img {
+    background-color: #e8e8e8;
+    max-width: 90%;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+
+    img {
+      max-width: 91%;
+      transform: translate(5%, 4%);
+      border-radius: 4px;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
-    .navbar {
-        
-        &-brand {
-            font-size: 1.7rem;
-        }
+  .navbar {
+
+    &-brand {
+      font-size: 1.7rem;
+    }
+  }
+
+  .header {
+
+    &__intro {
+      position: relative;
+
+      &__cont {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-40%);
+      }
+
+      &__name {
+        font-size: 4.2rem;
+      }
     }
 
-    .header {
+    &__img {
 
-        &__intro {
-            position: relative;
-
-            &__cont {
-                position: absolute;
-                top: 40%;
-                transform: translateY(-40%);
-            }
-
-            &__name {
-                font-size: 4.2rem;
-            }
-        }
-
-        &__img {
-    
-            img {
-                max-width: 94%;
-                transform: translate(14px, 14px);
-            }
-        }
+      img {
+        max-width: 94%;
+        transform: translate(14px, 14px);
+      }
     }
+  }
 }

@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { NavbarDropdownDirective } from './header/navbar-dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProjectsComponent } from './projects/projects.component';
     HeaderComponent,
     FooterComponent,
     AboutMeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    NavbarDropdownDirective
   ],
   imports: [
     BrowserModule,
