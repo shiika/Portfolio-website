@@ -9,6 +9,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavbarDropdownDirective } from './header/navbar-dropdown.directive';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { HomeComponent } from './home/home.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ContactComponent } from './contact/contact.component';
     AboutMeComponent,
     ProjectsComponent,
     NavbarDropdownDirective,
-    ContactComponent
+    ContactComponent,
+    ProjectDetailsComponent,
+    HomeComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

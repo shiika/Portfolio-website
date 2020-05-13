@@ -1,0 +1,37 @@
+@import "../../assets/Scss/variables";
+@import "../../assets/Scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.header {
+  padding: 7rem 0;
+  background-color: $light-background;
+
+  &__intro {
+
+    &__name {
+      font-size: 3rem;
+      color: $heading-color;
+    }
+
+    &__desc {
+      color: #666;
+    }
+
+    &__button {
+      @include primary-button;
+    }
+  }
+}
+
+.details {
+    padding: 4rem 0;
+
+    &__img {
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
