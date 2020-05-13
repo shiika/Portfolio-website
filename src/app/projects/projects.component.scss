@@ -1,0 +1,80 @@
+@import "../../assets/Scss/variables";
+@import "../../assets/Scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.projects {
+  padding: 4rem 0;
+
+  &__header {
+
+    h1 {
+      @include primary-heading;
+    }
+  }
+
+  &__project {
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 80%;
+      color: white;
+      opacity: 0;
+      transition: top .4s, opacity .4s;
+      z-index: 1000;
+    }
+
+    .overlay {
+
+      position: absolute;
+      background-color: $color-primary;
+      top: 50px;
+      left: 0;
+      margin-left: 15px;
+      width: calc(100% - 29px);
+      height: 100%;
+      color: white;
+      opacity: 0;
+      transition: opacity .3s, top .3s;
+
+      h3 {
+        font-size: 1.25rem;
+        color: white;
+        font-weight: 700;
+      }
+    }
+
+    &:hover .overlay {
+      opacity: 0.8;
+      top: 0;
+    }
+
+    &:hover .projects__project__content {
+        top: 50%;
+        opacity: 1;
+    }
+
+    img {
+      max-width: 100%;
+      position: relative;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+
+  .about-me {
+
+    &__label {
+
+      &__heading {
+        font-size: 3rem;
+      }
+    }
+  }
+}

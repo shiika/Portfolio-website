@@ -12,21 +12,7 @@
         padding: 8rem 2rem;
 
         &__heading {
-            font-size: 2rem;
-            color: $heading-color;
-            position: relative;
-
-            &::before {
-                content: '';
-                background-color: $color-primary;
-                width: 70%;
-                height: 4px;
-                position: absolute;
-                top: 150%;
-                left: 50%;
-                transform: translateX(-50%);
-
-            }
+            @include primary-heading;
         }
     }
 
